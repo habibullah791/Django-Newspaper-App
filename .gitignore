@@ -1,0 +1,16 @@
+# Editors
+.vscode/
+.idea/
+
+
+**/__pycache__/
+__pycache__/
+
+*.pyc
+__pycache
+.DS_Store
+.git
+.vscode
+
+.env/
+.venv/
