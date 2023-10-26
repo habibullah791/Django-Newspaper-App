@@ -65,6 +65,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
             ],
         },
+        "DIRS": [BASE_DIR / "templates"] #new
     },
 ]
 
@@ -126,3 +127,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Custom user model 
 AUTH_USER_MODEL = "accounts.CustomUser" #new
+
+
+# Redirect to home page after login
+LOGIN_REDIRECT_URL = "home"
+
+# Redirect to home page after log out
+LOGOUT_REDIRECT_URL = "home"
