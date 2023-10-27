@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "accounts.apps.AccountsConfig" #new
+    # local
+    "accounts.apps.AccountsConfig", #new
+    "pages.apps.PagesConfig", #new
+    "articles.apps.ArticlesConfig",
+    # 3rd party
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -65,6 +71,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
             ],
         },
+        "DIRS": [BASE_DIR / "templates"] #new
     },
 ]
 
@@ -126,3 +133,23 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Custom user model 
 AUTH_USER_MODEL = "accounts.CustomUser" #new
+
+
+# Redirect to home page after login
+LOGIN_REDIRECT_URL = "home"
+
+# Redirect to home page after log out
+LOGOUT_REDIRECT_URL = "home"
+
+
+# crispy_form 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5" #new
+CRISPY_TEMPLATE_PACK = "bootstrap5" # new
+
+
+# django console backend to send the email 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
+
+
+# time zone 
+TIME_ZONE = "America/New_York" # new
