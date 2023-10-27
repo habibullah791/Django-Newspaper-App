@@ -37,12 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # 3rd party
-    "crispy_forms",
-    "crispy_bootstrap5",
     # local
     "accounts.apps.AccountsConfig", #new
     "pages.apps.PagesConfig", #new
+    "articles.apps.ArticlesConfig",
+    # 3rd party
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -149,3 +150,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5" # new
 # django console backend to send the email 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
 
+
+# time zone 
+TIME_ZONE = "America/New_York" # new
